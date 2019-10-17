@@ -42,7 +42,7 @@ const routes = [
     component: () => import("../views/Feedback.vue")
   },
   {
-    path: "/locations:id",
+    path: "/locations/:id",
     name: "locations",
     meta: { layout: "main" },
     component: () => import("../views/Locations.vue")
