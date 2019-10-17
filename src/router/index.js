@@ -33,7 +33,7 @@ const routes = [
     path: "/comingsoon",
     name: "comingsoon",
     meta: { layout: "main" },
-    component: () => import("../views/Comingsoon.vue")
+    component: () => import("../views/ComingSoon.vue")
   },
   {
     path: "/feedback",
@@ -42,7 +42,7 @@ const routes = [
     component: () => import("../views/Feedback.vue")
   },
   {
-    path: "/locations",
+    path: "/locations:id",
     name: "locations",
     meta: { layout: "main" },
     component: () => import("../views/Locations.vue")
@@ -51,7 +51,7 @@ const routes = [
     path: "/openinghours",
     name: "openinghours",
     meta: { layout: "main" },
-    component: () => import("../views/Openinghours.vue")
+    component: () => import("../views/OpeningHours.vue")
   },
   {
     path: "/prescriptions",

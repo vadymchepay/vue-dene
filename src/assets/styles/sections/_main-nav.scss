@@ -45,6 +45,7 @@
             width: 24px;
             padding: 0;
             outline: none;
+            border: none;
             .hamburger {
                 display: block;
                 width: 24px;
@@ -119,8 +120,10 @@
             font-size: 14px;
             margin-right: 2px;
             margin-bottom: 0;
-            a {
+            a,
+            span {
                 color: $color-blue;
+                cursor: pointer;
             }
         }
     }
@@ -130,10 +133,12 @@
             &:nth-last-of-type(3) {
                 margin-right: 2px;
             }
-            a {
+            a,
+            span {
                 text-decoration: none;
                 display: flex;
                 align-items: center;
+                cursor: pointer;
                 &:hover {
                     text-decoration: none;
                     span {
