@@ -58,18 +58,18 @@
             <ul class="locations-list">
               <h6>Locations:&nbsp;</h6>
               <li>
-                <span @click="$router.push({ path: 'locations/:farnham' })">Farnham Centre for Health</span>
+                <span @click="$router.push({ path: '/locations/sfarnham' })">Farnham Centre for Health</span>
               </li>
               <li>
                 <span>&nbsp;|&nbsp;</span>
               </li>
               <li>
-                <span @click="$router.push({ path: 'locations/:bourne' })">Lower Bourne</span>
+                <span @click="$router.push({ path: '/locations/bourne' })">Lower Bourne</span>
               </li>
             </ul>
             <ul class="info-list">
               <li>
-                <span @click="$router.push({ path: 'openinghours' })">
+                <span @click="$router.push({ path: '/openinghours' })">
                   <img src="../assets/img/time.svg" alt="time-icon" />&nbsp;
                   <span>Opening Hours</span>
                 </span>
