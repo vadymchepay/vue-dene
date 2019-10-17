@@ -1,0 +1,262 @@
+.news-section {
+    background: #e0e9fa;
+    .ql-row {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .custom-px {
+        padding: 0 5px;
+    }
+    .breaking-news-ticker {
+        display: block;
+        width: 100%;
+        height: 50px !important;
+        height: 60px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        text-align: auto;
+        box-sizing: border-box;
+    }
+    .breaking-news-ticker.bn-fixed-top {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .breaking-news-ticker.bn-fixed-bottom {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    /*********************************/
+    /*title styles start**************/
+    .bn-label {
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        color: $color-dark;
+        z-index: 3;
+        white-space: nowrap;
+        width: 143px;
+        background-color: #e0e9fa;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        padding: 13px 0;
+        border-radius: 0;
+    }
+    /*title styles end****************/
+    /*********************************/
+    /*news item style start **********/
+    .bn-news {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        right: 0;
+        overflow: hidden;
+    }
+    .bn-news ul {
+        display: block;
+        height: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+    }
+    .bn-news ul li {
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-decoration: none;
+        -webkit-transition: color .2s linear;
+        -moz-transition: color .2s linear;
+        -o-transition: color .2s linear;
+        transition: color .2s linear;
+        position: absolute;
+        width: 100%;
+        display: none;
+        padding: 7px 0;
+    }
+    .bn-news ul li span {
+        font-weight: 400;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    .bn-news ul li a {
+        text-decoration: none;
+        position: relative;
+        font-weight: 600;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $color-blue;
+        display: inline-block;
+        padding: 0 23px 0 0;
+    }
+    .bn-news ul li a:hover {
+        color: #069;
+    }
+    .bn-loader-text {
+        padding: 0 10px;
+    }
+    .bn-seperator {
+        display: inline-block;
+        float: left;
+        margin-right: 15px;
+        width: 30px;
+        height: 40px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .bn-seperator.bn-news-dot {
+        margin-right: 0;
+    }
+    .bn-seperator.bn-news-dot:after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #333;
+        border-radius: 50%;
+        top: 50%;
+        margin-top: -4px;
+        left: 50%;
+        margin-left: -4px;
+    }
+    .bn-prefix {
+        color: #d65d7a;
+        margin-right: 15px;
+        padding-left: 10px;
+    }
+    .bn-positive {
+        color: #0b8457;
+        font-weight: bold;
+    }
+    .bn-negative {
+        color: #dc2f2f;
+        font-weight: bold;
+    }
+    /*news item style end ************/
+    /*********************************/
+    /*controls style start ***********/
+    .bn-controls {
+        width: auto;
+        right: 1px;
+        top: 5px;
+        bottom: 6px;
+        height: 100%;
+        position: absolute;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .bn-controls button {
+        padding: 0;
+        border: 0;
+        outline: none;
+    }
+    /*controls style end *************/
+    /*********************************/
+    .bn-direction-rtl {
+        direction: rtl;
+    }
+    .bn-direction-rtl .bn-label {
+        left: auto;
+        right: 0;
+    }
+    .bn-direction-rtl .bn-controls {
+        right: auto;
+        left: 0;
+    }
+    .bn-direction-rtl .bn-seperator {
+        margin-left: 15px;
+        margin-right: 0;
+        float: right;
+    }
+    .bn-direction-rtl .bn-prefix {
+        margin-left: 15px;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 10px;
+    }
+    .bn-direction-rtl .bn-controls button {
+        border-left: none;
+        border-right: solid 1px #EEE;
+    }
+    .bn-effect-scroll .bn-news ul {
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+    .bn-effect-scroll .bn-news ul li {
+        display: list-item;
+        float: left;
+        position: relative;
+        width: auto;
+    }
+    .bn-effect-scroll.bn-direction-rtl .bn-news ul li {
+        float: right;
+    }
+}
+
+@media (max-width: 991px) {
+    .news-section {
+        .bn-label {
+            display: none!important;
+        }
+        .bn-news {
+            left: 0!important;
+            li {
+                max-width: 640px!important;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .news-section {
+        .breaking-news-ticker {
+            height: 40px!important;
+        }
+        .bn-news {
+            ul {
+                width: 90%;
+                li {
+                    padding: 0;
+                    a {
+                        padding: 0 0 0 10px;
+                        font-size: 14px;
+                    }
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .bn-controls {
+            top: 0;
+            right: 10px;
+            button {
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

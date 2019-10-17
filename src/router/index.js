@@ -8,16 +8,62 @@ const routes = [
   {
     path: "/",
     name: "home",
+    meta: { layout: "main" },
     component: Home
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/appointments",
+    name: "appointments",
+    meta: { layout: "main" },
+    component: () => import("../views/Appointments.vue")
+  },
+  {
+    path: "/cancelappointment",
+    name: "cancelappointment",
+    meta: { layout: "main" },
+    component: () => import("../views/CancelAppointment.vue")
+  },
+  {
+    path: "/clinics",
+    name: "clinics",
+    meta: { layout: "main" },
+    component: () => import("../views/Clinics.vue")
+  },
+  {
+    path: "/comingsoon",
+    name: "comingsoon",
+    meta: { layout: "main" },
+    component: () => import("../views/Comingsoon.vue")
+  },
+  {
+    path: "/feedback",
+    name: "feedback",
+    meta: { layout: "main" },
+    component: () => import("../views/Feedback.vue")
+  },
+  {
+    path: "/locations",
+    name: "locations",
+    meta: { layout: "main" },
+    component: () => import("../views/Locations.vue")
+  },
+  {
+    path: "/openinghours",
+    name: "openinghours",
+    meta: { layout: "main" },
+    component: () => import("../views/Openinghours.vue")
+  },
+  {
+    path: "/prescriptions",
+    name: "prescriptions",
+    meta: { layout: "main" },
+    component: () => import("../views/Prescriptions.vue")
+  },
+  {
+    path: "/praticeteam",
+    name: "praticeteam",
+    meta: { layout: "main" },
+    component: () => import("../views/PraticeTeam.vue")
   }
 ];
 

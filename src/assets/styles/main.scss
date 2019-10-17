@@ -1,0 +1,31 @@
+//Base styles
+@import 'variables';
+@import 'mixins';
+@import 'normalize';
+@import 'fonts';
+@import 'base';
+
+//Elements
+
+//@import 'elements/preloader';
+
+//Sections
+@import 'sections/main-nav';
+@import 'sections/page-nav';
+@import 'sections/page-tabs';
+@import 'sections/hero';
+@import 'sections/news-section';
+@import 'sections/quick-links';
+@import 'sections/pratice-information';
+@import 'sections/opening-hours';
+@import 'sections/availability-table';
+@import 'sections/aside-page';
+@import 'sections/form';
+@import 'sections/footer';
+
+
+
+//Media
+
+//@import 'media';
+

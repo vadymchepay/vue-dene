@@ -1,0 +1,568 @@
+.hero {
+    .carousel {
+        height: 420px;
+        .carousel-indicators {
+            bottom: 10px;
+            li {
+                @include size(8px, 8px);
+                border: 2px solid $color-white;
+                border-radius: 50%;
+                background-color: transparent;
+            }
+        }
+        .carousel-inner {
+            .carousel-item {
+                @include size(100%, 420px);
+                .main-banner {
+                    @include size(100%, 100%);
+                    padding: 45px 100px 40px;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    background-position: center center;
+                    &.slide_1 {
+                        background-image: url(../img/welcome-background.jpg);
+                        background-size: 1440px 420px;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
+                    &.slide_2 {
+                        background-image: url(../img/banner-1-background.jpg);
+                        background-size: 100% 1287px;
+                        background-position: center top;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            @include size(auto, 30px);
+            opacity: 1;
+            top: 170px;
+            background-image: none;
+        }
+        .carousel-control-prev {
+            left: 14px;
+        }
+        .carousel-control-next {
+            right: 14px;
+        }
+    }
+    .banner {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        color: $color-white;
+        &-icon {
+            width: 150px;
+            margin: 0 auto 40px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 41px;
+            text-align: center;
+            margin-bottom: 13px;
+            margin-top: 0;
+        }
+        &-text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+            &.text_2 {
+                margin-bottom: 0;
+            }
+        }
+        &-features {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 47px;
+            &-item {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-right: 20px;
+                &-icon {
+                    width: 70px;
+                    height: 70px;
+                    margin-right: 15px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &-text {
+                    width: 205px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+        &-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-red {
+            display: block;
+            width: 133px;
+            height: 40px;
+            background-color: #F45063;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+            color: #FFFFFF;
+            text-decoration: none;
+            cursor: pointer;
+            margin-right: 20px;
+            &:hover {
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+        }
+        .btn-video {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 40px;
+            background-color: transparent;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #FFFFFF;
+            text-decoration: none;
+            cursor: pointer;
+            &-icon {
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .welcome-banner {
+        width: 100%;
+        max-width: 671px;
+        margin: 0 auto;
+        position: relative;
+        &-top {
+            font-weight: 300;
+            font-size: 21px;
+            line-height: 30px;
+            text-align: center;
+            letter-spacing: 2px;
+            color: $color-white;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            margin-top: 25px;
+            transition: 0.4s linear;
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 44px;
+            line-height: 54px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $color-white;
+            margin-bottom: 32px;
+            transition: 0.4s linear;
+        }
+        &-bottom {
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 30px;
+            text-align: center;
+            letter-spacing: 2px;
+            color: #F57C33;
+            margin-bottom: 18px;
+            transition: 0.4s linear;
+        }
+        &-note {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            color: $color-white;
+            opacity: 0.8;
+            transition: 0.4s linear;
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 181px;
+            height: 198px;
+            border: 2px solid $color-white;
+            border-right: none;
+            position: absolute;
+            left: 0;
+            top: 13px;
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: 181px;
+            height: 198px;
+            border: 2px solid $color-white;
+            border-left: none;
+            position: absolute;
+            right: 0;
+            top: 13px;
+        }
+        .anim {
+            transform: translateY(15px);
+            opacity: 0;
+        }
+    }
+    .banner-left {
+        &-logo {
+            width: 217px;
+            margin-bottom: 17px;
+            img {
+                width: 100%;
+                height: auto
+            }
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 48px;
+            color: #5C6372;
+            margin-bottom: 9px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        &-feature {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            color: #0689BC;
+        }
+        .banner-btn {
+            display: block;
+            @include size(215px, 40px);
+            box-shadow: 0px 3px 12px rgba(38, 70, 83, 0.21);
+            border-radius: 20px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .btn-blue {
+            background-color: #0689BC;
+            color: $color-white;
+        }
+        .btn-white {
+            background-color: $color-white;
+            color: #152963;
+        }
+        .color-white {
+            color: $color-white;
+        }
+    }
+    .banner-right {
+        width: 420px;
+        height: 100%;
+        position: relative;
+        .banner-card {
+            @include size(160px, 171px);
+            background-color: $color-white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            box-shadow: 0px 3px 23px rgba(99, 113, 121, 0.188774);
+            border-radius: 3px;
+            &-image {
+                width: 85px;
+                margin-bottom: 9px;
+            }
+            &-title {
+                font-weight: 700;
+                font-size: 19px;
+                line-height: 24px;
+                text-align: center;
+                color: #4F535B;
+            }
+        }
+        .card-mind {
+            top: 99.5px;
+            z-index: 6;
+        }
+        .card-body {
+            top: 0.5px;
+            left: 136px;
+            z-index: 8;
+        }
+        .card-behaviour {
+            top: 133.5px;
+            right: 0;
+            z-index: 10;
+        }
+        .pale-red {
+            background-color: #D16060;
+        }
+        .pale-blue {
+            background-color: #6188B2;
+        }
+        .pale-green {
+            background-color: #4DA88E;
+        }
+        .pale-text {
+            color: $color-white;
+            opacity: .8;
+        }
+    }
+}
+
+@media (min-width: 1441px) {
+    .hero {
+        .banner {
+            width: 100%;
+            max-width: 1350px;
+            margin: 0 auto;
+        }
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    .main-banner {
+                        &.slide_1 {
+                            background-size: 100% 557px;
+                            background-position: center center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .hero {
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    .main-banner {
+                        &.slide_2 {
+                            background-size: 1462px 974px;
+                            background-position: center top;
+                        }
+                    }
+                }
+            }
+        }
+        .banner {
+            width: 100%;
+            max-width: 1350px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .hero {
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    .main-banner {
+                        padding: 45px 60px 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .hero {
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    .main-banner {
+                        padding: 45px 60px 40px;
+                    }
+                }
+            }
+        }
+        .banner {
+            width: 100%;
+            margin: 0 auto;
+            color: $color-white;
+            &-icon {
+                margin: 0 auto 30px;
+            }
+            &-title {
+                text-align: center;
+            }
+            &-text {
+                width: 100%;
+                max-width: 634px;
+                margin: 0 auto 26px;
+                text-align: center;
+                &.text_2 {
+                    display: block;
+                }
+            }
+            &-features {
+                display: none;
+            }
+            &-buttons {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        .welcome-banner {
+            max-width: 550px;
+            &-top {
+                font-size: 21px;
+            }
+            &-title {
+                font-size: 40px;
+                line-height: 54px;
+            }
+            &-bottom {
+                font-size: 21px;
+            }
+            &-note {
+                font-size: 14px;
+                line-height: 21px;
+            }
+            &::before {
+                width: 125px;
+                height: 198px;
+            }
+            &::after {
+                width: 125px;
+                height: 198px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .hero {
+        .banner {
+            width: 100%;
+            margin: 0 auto;
+            color: $color-white;
+            &-icon {
+                margin: 0 auto 20px;
+            }
+            &-title {
+                margin-bottom: 20px;
+            }
+            &-text {
+                &.text_2 {
+                    display: none;
+                }
+            }
+            &-buttons {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .btn-red {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .welcome-banner {
+            max-width: 550px;
+            &-top {
+                font-size: 18px;
+            }
+            &-title {
+                font-size: 24px;
+            }
+            &-bottom {
+                font-size: 18px;
+            }
+            &-note {
+                font-size: 14px;
+                line-height: 21px;
+            }
+            &::before {
+                width: 40px;
+                height: 198px;
+            }
+            &::after {
+                width: 40px;
+                height: 198px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .hero {
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    .main-banner {
+                        padding: 34px 40px;
+                    }
+                }
+            }
+        }
+        .banner {
+            &-title {
+                font-size: 28px;
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            &-text {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .hero {
+        .welcome-banner {
+            &-top {
+                font-size: 16px;
+            }
+            &-title {
+                font-size: 23px;
+                line-height: 36px;
+            }
+            &-bottom {
+                font-size: 16px;
+                margin-bottom: 7px;
+            }
+            &::before {
+                width: 30px;
+            }
+            &::after {
+                width: 30px;
+            }
+        }
+    }
+}

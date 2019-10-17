@@ -1,0 +1,98 @@
+.page-nav {
+    width: 100%;
+    .nav-tabs-list {
+        width: 78%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &-item {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-dark;
+            padding: 7px 19px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            margin-bottom: 15px;
+            &.active {
+                color: $color-blue;
+                border-color: $color-blue;
+            }
+        }
+        &.open-hours {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+    .nav-tabs-select {
+        display: none;
+    }
+    &.pratice-time-nav {
+        .nav-tabs-list {
+            width: 450px;
+        }
+    }
+}
+
+@media (min-width: 1366px) and (max-width: 1439px) {
+    .page-nav {
+        .nav-tabs-list {
+            width: 85%;
+        }
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1365px) {
+    .page-nav {
+        .nav-tabs-list {
+            width: 90%;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1279px) {
+    .page-nav {
+        .nav-tabs-list {
+            width: 70%;
+            &-item {
+                &:nth-of-type(4) {
+                    margin-left: 60px;
+                }
+                &:nth-of-type(5) {
+                    margin-right: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .page-nav {
+        .nav-tabs-list {
+            width: 100%;
+            &-item {
+                margin-bottom: 18px;
+                &:nth-of-type(4) {
+                    margin-left: 130px;
+                }
+                &:nth-of-type(5) {
+                    margin-right: 130px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .page-nav {
+        .nav-tabs-list {
+            display: none;
+        }
+        .nav-tabs-select {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.page-tabs {
+    padding: 25px 0 40px;
+    .page-tabs-item {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .page-tabs {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .page-tabs {
+        padding-top: 55px;
+    }
+}

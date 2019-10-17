@@ -1,0 +1,131 @@
+.quick-links {
+    padding-top: 40px;
+    padding-bottom: 129px;
+    .ql-row {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .custom-px {
+        padding: 0 5px;
+    }
+    .prop-wrapper {
+        width: 100%;
+        padding-bottom: 64%;
+        position: relative;
+    }
+    .mask {
+        width: 100%;
+        max-width: 215px;
+        height: 100%;
+        margin: 0 auto;
+        font-size: 16px;
+        @include padding(27px, 27px, 27px, 26px);
+        text-transform: uppercase;
+        line-height: 1.5;
+        letter-spacing: 0.1px;
+        color: $color-white;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.2s ease-in;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        .mask-inline {
+            border: solid 1px $color-white;
+            @include size(100%, 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        &:hover {
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            transform: scale(1.06);
+            transition: all 0.2s ease-in;
+        }
+    }
+    .online {
+        background-color: #32578b;
+    }
+    .book {
+        background-color: #c63763;
+    }
+    .repeat {
+        background-color: #409954;
+    }
+    .cancel {
+        background-color: #535862;
+    }
+    .join {
+        background-color: #396885;
+    }
+    .beat {
+        background-color: #77459d;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .quick-links {
+        .mask {
+            @include padding(23px, 23px, 23px, 23px);
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1279px) {
+    .quick-links {
+        .mask {
+            font-size: 14px;
+            @include padding(15px, 15px, 15px, 15px);
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .quick-links {
+        padding-bottom: 88px;
+        .prop-wrapper {
+            margin-bottom: 17px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .quick-links {
+        padding-top: 50px;
+        padding-bottom: 88px;
+        .prop-wrapper {
+            padding: 0;
+            height: 112px;
+        }
+        .mask {
+            margin-bottom: 12px;
+            height: 100px;
+            padding: 15px 10px;
+            font-size: 12px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .quick-links {
+        padding-top: 50px;
+        padding-bottom: 88px;
+        .prop-wrapper {
+            padding: 0;
+            height: 112px;
+        }
+        .mask {
+            margin-bottom: 12px;
+            height: 100px;
+            padding: 15px 10px;
+            font-size: 12px;
+            .mask-inline {
+                padding: 0 20px;
+            }
+        }
+    }
+}
