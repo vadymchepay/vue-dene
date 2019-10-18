@@ -40,7 +40,7 @@
       "plugin:vue/essential",
       "@vue/prettier"
     ],
-    "rules": { 
+    "rules": {
       "no-console": "off"
     },
     "parserOptions": {
