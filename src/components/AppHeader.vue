@@ -1,5 +1,5 @@
 <template>
-  <!-- <header class="page-header">
+  <header class="page-header">
               <div class="section-inner">
             <nav class="navbar  navbar-expand-md">
                 <div class="navbar-header">
@@ -7,21 +7,21 @@
                     <img src="../assets/img/farnham-dene-logo.svg" alt="logo"> </span> <span class="navbar-brand-partner">
                         <img src="../assets/img/NHS-Logo.svg" alt="nhs">
                     </span> </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#locations"> <span class="hamburger">
+                    <button type="button" class="navbar-toggler show" @click="onCollapse" :class="{ collapse: !collapse }"> <span class="hamburger" :class="{ active: collapse }">
                         <span class="icon-bar"></span> </span>
                     </button>
                 </div>
-                <div class="navbar-collapse" id="locations">
+                <div class="navbar-collapse" :class="{ show: collapse }">
                     <div class="nav navbar-nav navbar-right">
                         <ul class="locations-list">
-                            <h6>Locations:&nbsp;</h6>
-                            <li><span @click="$router.push({ path: 'locations:farnham' })">Farnham Centre for Health</span></li>
-                            <li><span>&nbsp;|&nbsp;</span></li>
-                            <li><span @click="$router.push({ path: 'locations:bourne' })">Lower Bourne</span> </li>
+                            <h6>Locations:&nbsp;&nbsp;</h6>
+                            <li><span @click="onNavigate('/locations/farnham')">Farnham Centre for Health</span></li>
+                            <li><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span></li>
+                            <li><span @click="onNavigate('/locations/bourne')">Lower Bourne</span> </li>
                         </ul>
                         <ul class="info-list">
                             <li>
-                                <span @click="$router.push({ path: 'openinghours' })"> <img src="../assets/img/time.svg" alt="time-icon">&nbsp;<span>Opening Hours</span></span>
+                                <span @click="onNavigate('/openinghours')"> <img src="../assets/img/time.svg" alt="time-icon">&nbsp;<span>Opening Hours</span></span>
                             </li>
                             <li>
                                 <span> <img src="../assets/img/call.svg" alt="call-icon">&nbsp;<span>01252 730 100</span></span>
@@ -33,84 +33,30 @@
                 </div>
             </nav>
         </div>
-  </header>-->
-  <header class="page-header">
-    <div class="section-inner">
-      <b-navbar toggleable="md">
-        <div class="navbar-header">
-          <b-navbar-brand href="#" class="navbar-logo">
-            <span class="navbar-brand-main">
-              <img src="../assets/img/farnham-dene-logo.svg" alt="logo" />
-            </span>
-            <span class="navbar-brand-partner">
-              <img src="../assets/img/NHS-Logo.svg" alt="nhs" />
-            </span>
-          </b-navbar-brand>
-
-          <b-navbar-toggle target="nav-collapse">
-            <span class="hamburger">
-              <span class="icon-bar"></span>
-            </span>
-          </b-navbar-toggle>
-        </div>
-        <b-collapse class="navbar-collapse" id="nav-collapse" is-nav>
-          <b-navbar-nav class="nav navbar-right">
-            <ul class="locations-list">
-              <h6>Locations:&nbsp;</h6>
-              <li>
-                <span @click="$router.push({ path: '/locations/sfarnham' })">Farnham Centre for Health</span>
-              </li>
-              <li>
-                <span>&nbsp;|&nbsp;</span>
-              </li>
-              <li>
-                <span @click="$router.push({ path: '/locations/bourne' })">Lower Bourne</span>
-              </li>
-            </ul>
-            <ul class="info-list">
-              <li>
-                <span @click="$router.push({ path: '/openinghours' })">
-                  <img src="../assets/img/time.svg" alt="time-icon" />&nbsp;
-                  <span>Opening Hours</span>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <img src="../assets/img/call.svg" alt="call-icon" />&nbsp;
-                  <span>01252 730 100</span>
-                </span>
-              </li>
-            </ul>
-            <div class="rating-block">
-              <h6>CQC Rating</h6>
-              <a
-                href="https://www.cqc.org.uk/location/1-547710463"
-                class="rating"
-                target="_blank"
-              >Good</a>
-            </div>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-navbar>
-    </div>
   </header>
+  
 </template>
 
 <script>
-import { BNavbar } from "bootstrap-vue";
-import { BCollapse } from "bootstrap-vue";
-import { BNavbarNav } from "bootstrap-vue";
-import { BNavbarToggle } from "bootstrap-vue";
-import { BNavbarBrand } from "bootstrap-vue";
 
 export default {
   name: "app-header",
-  components: {
-    BNavbar,
-    BCollapse,
-    BNavbarNav,
-    BNavbarToggle,
-    BNavbarBrand
+  data: function(){
+    return {
+      collapse: false
+    }
+  },
+  methods: {
+      onCollapse: function(){
+        this.collapse = !this.collapse;
+      },
+      onNavigate: function(path){
+        this.$router.push({ path: path }, ()=>{
+          if(window.innerWidth < 768){
+            this.onCollapse();
+          }
+        })
+      }
   }
 };
 </script>
